@@ -1,0 +1,44 @@
+body {
+    background-image: linear-gradient(135deg, #ccd0fe 0%, #fc8ce8 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.wrapper {  
+    padding-top: 100px;
+    width: 320px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px 100px;
+    margin: 0 auto;
+    .box {
+        position: relative;
+        background-color: white;
+        border: 1px solid black;
+        margin: 5px;
+        background-image: linear-gradient(135deg, #fb267f 0%, #170127 100%);
+        font-size:80px;
+        text-align: center;
+        color: #ccd0fe;
+        border-radius: 4px;
+        
+        
+    }
+    .box:hover {
+        background-image: linear-gradient(135deg, #5b003e 0%, #005d60 100%);
+        transform: scale(1.2);
+        transition:  0.3s ease-out;
+    }
+    
+    .active:before {
+        content: ""; /* Забезпечуємо існування псевдоелементу */
+        position: absolute;
+        top: -5px; /* Відступ зверху від кнопки */
+        left: -5px; /* Відступ зліва від кнопки */
+        right: -5px; /* Відступ справа від кнопки */
+        bottom: -5px; /* Відступ знизу від кнопки */
+        border: 3px solid #473ce7; /* Товщина та колір контуру */
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+}
